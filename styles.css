@@ -1,29 +1,146 @@
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
+*{
+	font-family: sans-serif;
+	Line-height: 1.618em;
+	margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+  margin-top: 3em;
+  padding: 3em;
+}
+
+#bio{
+  padding: 1rem 1rem;
+}
+
+main {
+  box-shadow: 0 0 8px 5px rgba(16, 18, 19, 0.664); 
+}
+
   .fa {
-    padding: 20px;
+    padding: 5px;
     font-size: 30px;
     width: 40px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
+    margin: 5px 50px;
   }
   .fa-github {
-    background: #095;
-    color: #bb0000;
+    background: #000000;
+    color: #ffffff;
   }
   
   .fa:hover {
     opacity: 0.7;
   }
 
-.grid-container {
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+    grid-template-columns: auto auto;
+    text-align: center;
+    grid-gap: 20px;
+    padding-bottom: 1.618rem;
+
+  }
 .grid-item {
     border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: left;
+  }
+
+  h2, h3, p {
+ color: #555555;
+  }
+  .header {
+    padding: 2em 0;
+  }
+
+  .header span{
+    color: #999;
     text-align: center;
+  }
+ 
+  .header p{
+    text-align: center;
+  } 
+  .mugShot {
+    grid-column: 1 / -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/Headshot.jpg");
+    height: auto ;
+    object-fit: scale-down;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .hero-text {
+    color: #fff;
+    text-align: center;
+    margin: 10rem;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background: rgb(223, 20, 20);
+  }
+
+  nav a {
+    padding: 0.5em 2em;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav a:hover {
+    background: #666;
+  }
+
+  #skills {
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 2em; 
+    justify-content: space-around; 
+
+  }
+
+  
+  #skills li {
+    list-style-type: none;
+  }
+  #projects {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    padding-bottom: 10px;
+  }
+  
+  #projects article {
+    background: #dddddd;
+    
+  }
+  #projects article ul {
+    list-style: none;
+    padding: 0 20px;
+  }
+
+  #projects article p {
+    padding: 0 10px;
   }
