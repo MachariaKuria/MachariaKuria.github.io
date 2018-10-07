@@ -1,0 +1,29 @@
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa-github {
+    background: #095;
+    color: #bb0000;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
