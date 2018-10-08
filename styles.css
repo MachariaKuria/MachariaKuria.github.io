@@ -52,7 +52,6 @@ main {
 
   }
 .grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: left;
   }
 
@@ -79,11 +78,12 @@ main {
     object-fit: scale-down;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    background-color: #000000;
   }
   .hero-text {
     color: #fff;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 10rem;
   }
@@ -93,11 +93,11 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    
+    padding-bottom: 2em;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    background: rgb(223, 20, 20);
+    background: rgb(223, 9, 9);
   }
 
   nav a {
