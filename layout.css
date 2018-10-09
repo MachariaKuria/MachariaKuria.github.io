@@ -1,0 +1,16 @@
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article {
+    flex: 1 200px;
+  }
+  
+  article:nth-of-type(3) {
+    flex: 2 200px;
+  }

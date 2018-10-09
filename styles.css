@@ -3,7 +3,7 @@ font-family: sans-serif;
 Line-height: 1.618em;
 margin: 0;
 padding: 0;
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html {
@@ -11,14 +11,71 @@ font-size: 16px;
 margin-top: 3em;
 padding: 3em;
 }
-main {
-box-shadow: 0 0 8px 5px rgba(16, 18, 19, 0.664); 
-}
-#bio {
-  padding-top: 2em;
-  padding-bottom: 2em;
+
+.header span{
+color: #999;
+text-align: center;
 }
 
+.header p{
+text-align: center;
+} 
+
+.mugShot {
+grid-column: 1 / -1;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("./images/Headshot.jpg");
+height: auto ;
+object-fit: scale-down;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+background-color: #000000;
+border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.pic-text {
+color: #fff;
+font-family: 'Lato', sans-serif;
+text-align: center;
+margin: 10rem;
+}
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding-bottom: 2em;
+display: flex;
+flex-flow: row;
+justify-content: center;
+background: rgb(223, 9, 9);
+}
+
+nav a {
+padding: 0.5em 2em;
+text-decoration: none;
+color: #fff;
+}
+
+nav a:hover {
+background: #666;
+}
+#footer {
+border-top: 1px solid var(--white);
+text-align: center;
+padding: 2rem 0 1.5rem;
+}
+h1, h2, h3, h4 p {
+color: #555555;
+font-family: 'Lato', sans-serif;
+}
+
+#socio {
+  text-align: center;
+padding: 2rem 0 1.5rem;
+}
 .fa {
   padding: 5px;
   font-size: 30px;
@@ -44,108 +101,3 @@ box-shadow: 0 0 8px 5px rgba(16, 18, 19, 0.664);
   background: #007bb5;
   color: white;
 }
-
-footer {
-  border-top: 1px solid var(--white);
-  text-align: center;
-  padding: 2rem 0 1.5rem;
-  }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  text-align: center;
-  grid-gap: 20px;
-  padding-bottom: 1.618rem;
-
-}
-
-h1m, h2, h3, h4 p {
-  color: #555555;
-  font-family: 'Lato', sans-serif;
-}
-.header {
-  padding: 0 2em;
-}
-
-.header span{
-  color: #999;
-  text-align: center;
-}
-
-.header p{
-  text-align: center;
-} 
-.mugShot {
-  grid-column: 1 / -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("./images/Headshot.jpg");
-  height: auto ;
-  object-fit: scale-down;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  background-color: #000000;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-}
-.hero-text {
-  color: #fff;
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-  margin: 10rem;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 2em;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  background: rgb(223, 9, 9);
-}
-
-nav a {
-  padding: 0.5em 2em;
-  text-decoration: none;
-  color: #fff;
-}
-
-nav a:hover {
-  background: #666;
-}
-
-#skills { 
-display: grid;
-grid-template-columns: repeat(2,1fr);
-grid-template-rows: auto;
-grid-column-gap: 1em;
-padding-bottom: 10px;
-}
-
-#skills li {
-  list-style-type: none;
-}
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 1em;
-  padding-bottom: 10px;
-}
-
-.projects article {
-  background: #dddddd;
-  
-}
-.projects article ul {
-  list-style: none;
-  padding: 0 10px;
-}
-
-.projects article p {
-  padding: 0 10px;
-}
-
