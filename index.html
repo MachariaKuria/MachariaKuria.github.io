@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio Website</title>
 </head>
 
 <body>
     <header class="header">
         <span>
-            <h1>My Portfolio</h1>
+            <h1>Personal Portfolio</h1>
         </span>
     </header>
     <div class="grid-item mugShot">
@@ -18,8 +19,8 @@
             <p><EM> Full Stack Java Developer</EM></p>
         </div>
     </div>
-    <main>
-        <section>
+    <main class="main">
+        <section id="aboutMe">
             <h2>Biography</h2>
             <p>I am a full stack software developer with concrete knowledge of object-oriented programming trained
                 within a
@@ -27,54 +28,138 @@
                 Java/Spring/MVC skills set. I look to standards that blend logic and development. I seek to utilize my
                 new
                 skills in a team/ development focused company as I expand and grow as a developer.</p>
-                <br/>
+            <br />
         </section>
-        <section class="aboutMe">
-            <article>
+        <section class="project1">
+            <header id="projHdr">
+                <h2>Projects</h2>
+            </header>
+            <article id="proj1">
                 <h3>Project 1</h3>
-                <p>Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                Access the ATM program. The applocation had user input prompts to the console.
-                Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                Access the ATM program. The applocation had user input prompts to the console.
-                </p>
+                <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
+                    Used the TDD environment, to modify a single pet and all pets behaviour under certain
+                    circumstances.The application handled adopting, admiting and changes in the behavior of pets in a Pet Shelter.</p>
             </article>
-            <article>
-                <h3>Project 2</h3>
-                <p>Created a Virtual Pet Application
-                    Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                    Access the ATM program. The applocation had user input prompts to the console.\                    Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                    Access the ATM program. The applocation had user input prompts to the console.
-                </p>
-            </article>
-            <article>
-                <h3>Project 3</h3>
-                <p>Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                   Access the ATM program. The applocation had user input prompts to the console.
-                   Created a ATM Application program. Used TDD to test the various classes and methods. Included user PIN to 
-                   Access the ATM program. The applocation had user input prompts to the console.</p>
-            </article>
+            <aside id="proj1Aside"><em>
+                Technologies used:
+                Loops, Branching statements, Collections, Iterables and Lists.
+            </em>
+            </aside>
+            <footer id="projFtr">
+                <a href="https://github.com/MachariaKuria/virtual-pet-shelter">Virtual Pet</a>
+            </footer>
         </section>
+        <section class="project2">
+                <article id="proj2">
+                    <h3>Project 2</h3>
+                    <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
+                        Used the TDD environment, to modify a single pet and all pets behaviour under certain
+                        circumstances.The application handled adopting, admiting and changes in the behavior of two types, Robotic and Organic pets.  
+                        Included in the application was APIE (Abstraction, Polymorphism,Inheritance and Encapsulation)
+                        pillars of OOP.</p>
+                </article>
+                <aside id="proj2Aside"><em>
+                    Technologies used:Iterables, Collections, Interfaces, Extensions and Inheritance.
+                </em>
+                </aside>
+                <footer id="proj2Ftr">
+                    <a href="https://github.com/MachariaKuria/virtual-pets-amok">Virtual Pets Amok</a>
+                </footer>
+            </section> 
+            <section class="project3">
+                <article id="proj3">
+                    <h3>Project 3</h3>
+                    <p>Created/configured a Spring Boot/MVC application.Used accessors methods to return information about review attributes. 
+                        These allowed the Thymeleaf templates to display information about reviews templates.</p>
+                </article>
+                <aside id="proj3Aside"><em>
+                    Technologies used:
+                    Spring Initialz; Thymeleaf;Spring MVC Framework.
+                </em>
+                </aside>
+                <footer id="proj3Ftr">
+                    <a href="https://github.com/MachariaKuria/Reviews-site">Reviews Site</a>
+                </footer>
+            </section>  
+        <div class="wrapper">
+            <header id="expHdr">
+                <h2>Experience</h2>
+            </header>
+            <article class="content">
+                    <ul>
+                        <li>Designed, developed and tested user friendly web pages per user specifications.</li>
+                        <li> Made modifications to SQL tables using DML -Updates, Inserts, Deletes and DDL - Alter,
+                            Create and Drop.</li>
+                        <li> Modified SQL objects (stored procedures, functions, tables). </li>
+                        <li> Built and Implemented SSIS packages using SQL data tools for data migration.</li>
+                        <li> Built and tested reports using the rdlc and Report viewer control.</li>
+                        <li> Monitored files crossing over from mainframe to the SQL server database tables using
+                            Agent99 application.</li>
+                    </ul>
+                
+            </article>
+            <aside class="aside aside-1">
+                <em>
+                    <h4>United Parcel Service</h4>
+                    <h5>Senior Web Developer</h5>
+                </em>
+            </aside>
+            <aside class="aside aside-2">
+                <em>
+                    <h5>Dates: Jan 2016 – Present</h5>
+                    <h5>Employment Duration: 2 yrs 10 mos</h5>
+                    <h5>Location: Columbus, Ohio Area</h5>
+                </em>
+            </aside>
+        </div>
+        <div class="wrapper">
+            <article class="content">
+                <p>
+                    <ul>
+                        <li>Run ad hoc queries to pull data from the SQL server database.</li>
+                        <li> Developed, designed and maintained MS Access applications. </li>
+                        <li>Maintained files, folders and subfolders managing access rights to user folders and file
+                            maintenance.</li>
+                    </ul>
+                </p>
+            </article>
+            <aside class="aside aside-1">
+                <em>
+                    <h4>United Parcel Service</h4>
+                    <h5>Programmer</h5>
+                </em>
+            </aside>
+            <aside class="aside aside-2">
+                <em>
+                    <h5>Dates: Mar 2013 – Dec 2015</h5>
+                    <h5>Employment Duration: 2 yrs 10 mos</h5>
+                    <h5>Location: Columbus, Ohio Area</h5>
+                </em>
+            </aside>
+        </div>
+
     </main>
     <nav>
         <a href="#aboutMe">My Skills</a>
-        <a href="#projects">My Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#projHdr">My Projects</a>
+        <a href="#expHdr">Experience</a>
     </nav>
     <link rel="stylesheet" type="text/css" href="./layout.css">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </body>
 <footer>
     <div id="socio">
         <a href="https://www.linkedin.com/in/macharia-kuria/" class="fa fa-linkedin"></a>
         <a href="https://github.com/MachariaKuria" class="fa fa-github"></a>
         <a href="https://docs.google.com/document/d/1gZcXmAiILLBIqZnZssrI7g-sNLrk_vFXV1sVNDwiZ60/edit" class="fa fa-google"></a>
-        <br/>Email: <a href="mailto:mashakuria@gmail.com">mashakuria@gmail.com</a>
+        <br />Email: <a href="mailto:mashakuria@gmail.com">mashakuria@gmail.com</a>
     </div>
     <div id="footer">
         <small>&copy; 2018 Macharia's portfolio website</small>
-    <div>
+        <div>
 </footer>
 
 </html>
