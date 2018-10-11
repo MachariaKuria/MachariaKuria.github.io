@@ -23,8 +23,17 @@
   max-width: auto;
   margin: 2rem auto;
   width: 1000px;
+  object-fit: cover;
+
+  transition: ease-out;
   }
   
+  .mugShot:hover {
+    transform: scale(1.15);
+  
+  }
+
+
   .pic-text {
   color: #fff;
   font-family: 'Lato', sans-serif;
@@ -41,17 +50,18 @@
   width: 100%;
   padding-bottom: 2em;
   justify-content: center;
-  background: rgb(223, 9, 9);
+  background: aqua;
   }
   
   nav a {
   padding: 0.5em 2em;
   text-decoration: none;
-  color: #fff;
+  color: rgb(8, 104, 67);
   }
   
   nav a:hover {
-  background: #666;
+  background: rgb(130, 233, 161);
+    transition-duration: 800ms;
   }
   h1, h2, h3, h4 p {
   color: #555555;
@@ -88,61 +98,140 @@
     color: white;
   }
   
-  
-  #expHdr {
-    text-align: left;
-  }
-  #expHdr h5 {
-    color: #555555;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-
-  .aside {
-    color: #555555;
-    font-family: 'Lato', sans-serif;  
-  }
-
-  .aside-1 {
-    text-align: left;
-
-
-  }
-
-  .aside-2 {
-    text-align: left;
-    padding-left: 40px;
-
-  }
 
 #projHdr,
 #projFtr,
 #proj2Ftr,#proj3Ftr {
   border-radius: 5px;
   padding: 10px;
-  background-color: #df2810;
-  border: 2px solid rgb(204, 7, 7);
+  background-color: aqua;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
+  border: 2px solid rgb(45, 227, 240);
   color: #000000;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   font-style: oblique;
+  
 
 }
 
 #proj1Aside {
-  border-right: 1px solid rgb(8, 8, 8);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: right;
 }
 
 #proj2Aside {
-  border-right: 1px solid rgb(8, 8, 8);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: right;
 }
 #proj3Aside {
-  border-right: 1px solid rgb(8, 8, 8);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: right;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
+#expBody, #div1,#div2, #expSection, #expArticle, h2, #expHdr, #expFtr{
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+#expHdr {
+  margin-top:24px;
+  padding: 24px;
+  text-align:center;
+}
+
+#expHdr h2 {
+  font-size: 36px;
+  font-weight: 200;
+  color: rgba(0,0,0,.7);
+  margin: 0px 0px 0px 0px;
+}
+
+#expHdr h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(15, 0, 22);
+  margin: 16px 0px 0px 0px;
+}
+
+#expFtr {
+  clear:both;
+  padding: 24px;
+}
+#expFtr h4{
+  font-size: 12px;
+  color: rgba(0,0,0,.4);
+}
+#expSection {
+  width:100%;  
+  padding: 12px;
+}
+
+#expArticle {
+  color: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  float: left;
+  width: 50%;
+  padding: 12px;
+}
+
+#div1, #div2 {
+  position:relative;
+  min-height: 280px;
+  width: 100%;
+  background-color: aqua;
+  background-image: -o-linear-gradient(45deg,#aa99cc 0%,#ffbbec 100%);
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 10px 20px rgba(5, 6, 7, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+#div1 li,
+#div2 li {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: #000000;
+  padding-left: .5rem;
+}
+
+#div1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 20px rgba(169, 201, 255, .6);
+}
+
+#div2:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 20px rgba(169, 201, 255, .6);
+}
+#expSection h2{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 960px) {
+  #expArticle{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #expArticle{
+    width: 100%;
+    padding: 8px;
+  }
+  #expSection{  
+    padding: 8px;
+    }
+    #div1,#div2:hover{
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
+    }
 }

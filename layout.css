@@ -25,37 +25,6 @@
 }
 
 
-.wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.wrapper > * {
-    padding-top: 20px;
-    flex: 1 100%;
-}
-
-.content {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.content > * {
-    flex: 1 1200px;
-}
-
-
-@media all and (min-width: 600px){
-    .aside {flex: 1 auto;}
-}
-
-@media all and (min-width: 800px){
-    .content {flex: 3 0px;}
-    .aside-1 { order: 1; }
-    .content {order: 2;}
-    .aside-2 {order:3;}
-}
 
 .project1 {
 
