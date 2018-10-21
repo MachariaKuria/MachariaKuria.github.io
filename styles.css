@@ -22,7 +22,6 @@
   border: 1px solid rgba(0, 0, 0, 0.8);
   max-width: auto;
   margin: 2rem auto;
-  width: 1000px;
   object-fit: cover;
 
   transition: ease-out;
@@ -44,13 +43,13 @@
   nav {
     display: flex;
     flex-flow: row; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 2em;
-  justify-content: center;
-  background: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 2em;
+    justify-content: center;
+    background: aqua;
   }
   
   nav a {
@@ -63,6 +62,38 @@
   background: rgb(130, 233, 161);
     transition-duration: 800ms;
   }
+
+  @media screen and (max-width: 980px) {
+
+    nav {
+      display: flex;
+      flex-flow: column;
+    }
+    nav a {
+      display: none;
+    }
+    nav::before {
+      content: 'SHOW NAV';
+      color: rgb(12, 11, 11);
+      background: aqua;
+      font-weight: bold;
+      padding: 0.5em 2em;
+    }
+    nav.open::before {
+      content: 'HIDE NAV';
+    }
+    nav.open a {
+      display: block;
+    }
+  
+    nav ::selection {
+      color: inherit;
+      background: transparent;
+    }
+  }
+
+
+
   h1, h2, h3, h4 p {
   color: #555555;
   font-family: 'Lato', sans-serif;
@@ -99,35 +130,7 @@
   }
   
 
-#projHdr,
-#projFtr,
-#proj2Ftr,#proj3Ftr {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: aqua;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
-  border: 2px solid rgb(45, 227, 240);
-  color: #000000;
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  font-style: oblique;
-  
 
-}
-
-#proj1Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
-
-#proj2Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
-#proj3Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
 #expBody, #div1,#div2, #expSection, #expArticle, h2, #expHdr, #expFtr{
@@ -135,25 +138,34 @@
   margin: 0px;
 }
 
-#expHdr {
-  margin-top:24px;
-  padding: 24px;
-  text-align:center;
+
+#projects article {
+  background: azure;
+  padding: 1em;
 }
 
-#expHdr h2 {
-  font-size: 36px;
+#projects article img{
+  width: 100%;
+  border: 1px solid #333;
+  box-shadow: 0 0 8px 5px rgba(187, 190, 192, 0.664)
+}
+
+#projects button {
+  display: none;
+}
+
+
+#expHdr {
+  text-align:center; 
+  color: #555555; 
+}
+#expHdr h2,h3 {
   font-weight: 200;
   color: rgba(0,0,0,.7);
   margin: 0px 0px 0px 0px;
+  font-family: 'Lato', sans-serif;
 }
 
-#expHdr h3 {
-  font-size: 16px;
-  font-weight: 400;
-  color: rgb(15, 0, 22);
-  margin: 16px 0px 0px 0px;
-}
 
 #expFtr {
   clear:both;
@@ -163,22 +175,7 @@
   font-size: 12px;
   color: rgba(0,0,0,.4);
 }
-#expSection {
-  width:100%;  
-  padding: 12px;
-}
 
-#expArticle {
-  color: white;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  float: left;
-  width: 50%;
-  padding: 12px;
-}
 
 #div1, #div2 {
   position:relative;
@@ -187,7 +184,7 @@
   background-color: aqua;
   background-image: -o-linear-gradient(45deg,#aa99cc 0%,#ffbbec 100%);
   border-radius: 15px;
-  padding: 24px;
+  padding: 16px ;
   box-shadow: 0 10px 20px rgba(5, 6, 7, 0.4);
   transition: 0.3s ease-in-out;
 }
@@ -198,7 +195,7 @@
   font-size: 14px;
   font-weight: 200;
   color: #000000;
-  padding-left: .5rem;
+  padding-left: .10rem;
 }
 
 #div1:hover {
@@ -216,22 +213,57 @@
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 960px) {
-  #expArticle{
-    width: 50%;
-  }
-}
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 750px) {
+  #expHdr{
+    display: flex;
+    flex-flow: column;
+    margin-top:24px;
+    padding: 24px;
+  }
+
   #expArticle{
-    width: 100%;
-    padding: 8px;
+    display: flex;
+    flex-flow: column;
   }
   #expSection{  
-    padding: 8px;
+    display: flex;
+    flex-flow: column;
+    width:100%;  
+    padding: 12px;
     }
     #div1,#div2:hover{
     transform: scale(1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
     }
+}
+
+@media screen and (max-width: 40em){
+  #projects {
+    grid-template-columns: 1fr;
+    grid-column-gap: 1em;
+    width: 60vw;
+    min-width: 22em;
+    margin: 1em auto;
+}
+
+  #projects button {
+    display: inline-block;
+  }
+
+  #projects article p {
+    display: none;
+  }
+
+  #projects article.expanded p {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 25em){
+  #projects {
+    width: auto;
+    min-width: unset;
+  }
 }
