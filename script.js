@@ -1,13 +1,3 @@
-
-/*setUpPage();
-
-function setUpPage() {
-  addNavEventListeners();
-  addArticleEventListeners();
-  addWindowEventListeners();
-  addModalEventListeners();
-  addSliderEventListeners();
-}*/
 addNavEventListeners();
   
   // Code to toggle navigation menu
@@ -47,3 +37,63 @@ function addArticleEventListeners() {
     });
   }
 }
+
+var i = 0;
+var images = [];
+var time = 3000;
+
+images[0] = './images/virtualPetShelter.jpg';
+images[1] = './images/PetsAmok.jpg'
+images[2] = './images/javascript.jpg';
+images[3] = './images/JPA.jpg';
+
+function changeImg(){
+  document.getElementById('slide').src = images[i];
+
+  let carousels = document.getElementsByClassName("image-carousel");
+
+  if(i < images.length - 1){
+    i++;
+  } else {
+    i = 0;
+  }
+
+  setTimeout("changeImg()",time);
+
+}
+
+  window.onload= changeImg;
+
+  //Get modal element
+  var modal = document.getElementById('simpleModal');
+  //Get open modal button
+  var modalBtn = document.getElementById('modalBtn');
+  //Get close button
+  var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+  //Listen for open click
+  modalBtn.addEventListener('click',openModal);
+
+    //Listen for open click
+    closeBtn.addEventListener('click',closeModal);
+
+    //Listen for outside click
+    window.addEventListener('click',outsideClick);
+
+  //Function to open modal
+  function openModal(){
+    modal.style.display = 'block';
+  }
+
+  //Function to close modal
+  function closeModal(){
+    modal.style.display = 'none';
+  }
+
+  //Function to close modal if outside click
+  function outsideClick(){
+    if(e.target === modal){
+      modal.style.display = 'none';
+    }
+    
+  }

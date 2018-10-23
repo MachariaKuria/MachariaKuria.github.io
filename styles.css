@@ -1,5 +1,4 @@
-
-  .header span{
+.header span{
   color: #999;
   text-align: center;
   
@@ -63,7 +62,7 @@
     transition-duration: 800ms;
   }
 
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 750px) {
 
     nav {
       display: flex;
@@ -236,6 +235,11 @@
     transform: scale(1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
     }
+
+    .image-carousel img {
+      width: auto;
+      position: relative;
+    }
 }
 
 @media screen and (max-width: 40em){
@@ -259,6 +263,10 @@
     display: block;
   }
 
+  .image-carousel img {
+    width: auto;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 25em){
@@ -266,4 +274,107 @@
     width: auto;
     min-width: unset;
   }
+
+  .image-carousel img {
+    width: auto;
+    position: relative;
+  }
 }
+
+.image-carousel img {
+  width : 600px;
+  height: 300px;
+  border-style:solid;
+  border-width:1px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  text-align:center;
+  
+}
+
+.image-carousel h2 {
+  text-align: center;
+ 
+ }
+
+ .image-carousel img #slide {
+   display: block;
+   box-align: center;
+ }
+
+
+
+ .bioBtn {
+  background: aqua;
+  padding: .1em 2em;
+  color: black;
+  border:0;
+}
+
+.bioBtn:hover {
+   background: #333;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0,0.5);
+}
+
+.modal-content {
+  background-color: azure;
+  margin: 20% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgb(0, 0, 0,0.2),
+  0 7px 20px 0 rgb(0, 0, 0,0.17);
+  animation-name: modalopen;
+  animation-duration: 3s;
+}
+
+.modal-header h2{
+  margin: 0;
+}
+
+.modal-header{
+  background: aquamarine;
+  padding: 15px;
+  color: #000000;
+}
+
+.modal-body{
+  padding: 10px 20px;
+}
+
+.modal-footer{
+  padding: 10px;
+  text-align: center;
+  background: aquamarine;
+  text-emphasis-style: initial;
+}
+
+.closeBtn {
+  color: #333;
+  float: right;
+  font-size: 1rem;
+
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
