@@ -38,6 +38,8 @@ function addArticleEventListeners() {
   }
 }
 
+//Code for the image Carousel javascript.
+
 var i = 0;
 var images = [];
 var time = 3000;
@@ -46,6 +48,7 @@ images[0] = './images/virtualPetShelter.jpg';
 images[1] = './images/PetsAmok.jpg'
 images[2] = './images/javascript.jpg';
 images[3] = './images/JPA.jpg';
+images[4] = './images/css.jpg';
 
 function changeImg(){
   document.getElementById('slide').src = images[i];
@@ -62,7 +65,11 @@ function changeImg(){
 
 }
 
+//call the function changeImg().
   window.onload= changeImg;
+
+
+  //Code for the modal box.
 
   //Get modal element
   var modal = document.getElementById('simpleModal');
@@ -92,7 +99,7 @@ function changeImg(){
 
   //Function to close modal if outside click
   function outsideClick(){
-    if(e.target === modal){
+    if(this.target === modal){
       modal.style.display = 'none';
     }
     
