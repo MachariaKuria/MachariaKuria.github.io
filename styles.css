@@ -1,5 +1,4 @@
-
-  .header span{
+.header span{
   color: #999;
   text-align: center;
   
@@ -22,7 +21,6 @@
   border: 1px solid rgba(0, 0, 0, 0.8);
   max-width: auto;
   margin: 2rem auto;
-  width: 1000px;
   object-fit: cover;
 
   transition: ease-out;
@@ -44,13 +42,13 @@
   nav {
     display: flex;
     flex-flow: row; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 2em;
-  justify-content: center;
-  background: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 2em;
+    justify-content: center;
+    background: aqua;
   }
   
   nav a {
@@ -63,6 +61,38 @@
   background: rgb(130, 233, 161);
     transition-duration: 800ms;
   }
+
+  @media screen and (max-width: 750px) {
+
+    nav {
+      display: flex;
+      flex-flow: column;
+    }
+    nav a {
+      display: none;
+    }
+    nav::before {
+      content: 'SHOW NAV';
+      color: rgb(12, 11, 11);
+      background: aqua;
+      font-weight: bold;
+      padding: 0.5em 2em;
+    }
+    nav.open::before {
+      content: 'HIDE NAV';
+    }
+    nav.open a {
+      display: block;
+    }
+  
+    nav ::selection {
+      color: inherit;
+      background: transparent;
+    }
+  }
+
+
+
   h1, h2, h3, h4 p {
   color: #555555;
   font-family: 'Lato', sans-serif;
@@ -99,61 +129,42 @@
   }
   
 
-#projHdr,
-#projFtr,
-#proj2Ftr,#proj3Ftr {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: aqua;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
-  border: 2px solid rgb(45, 227, 240);
-  color: #000000;
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  font-style: oblique;
-  
 
-}
-
-#proj1Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
-
-#proj2Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
-#proj3Aside {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: right;
-}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
-#expBody, #div1,#div2, #expSection, #expArticle, h2, #expHdr, #expFtr{
+#expBody, #div1,#div2, #expSection, .expArticle, h2, #expHdr, #expFtr{
   box-sizing: border-box;
   margin: 0px;
 }
 
-#expHdr {
-  margin-top:24px;
-  padding: 24px;
-  text-align:center;
+
+#projects article {
+  background: azure;
+  padding: 1em;
 }
 
-#expHdr h2 {
-  font-size: 36px;
+#projects article img{
+  width: 100%;
+  border: 1px solid #333;
+  box-shadow: 0 0 8px 5px rgba(187, 190, 192, 0.664)
+}
+
+#projects button {
+  display: none;
+}
+
+
+#expHdr {
+  text-align:center; 
+  color: #555555; 
+}
+#expHdr h2,h3 {
   font-weight: 200;
   color: rgba(0,0,0,.7);
   margin: 0px 0px 0px 0px;
+  font-family: 'Lato', sans-serif;
 }
 
-#expHdr h3 {
-  font-size: 16px;
-  font-weight: 400;
-  color: rgb(15, 0, 22);
-  margin: 16px 0px 0px 0px;
-}
 
 #expFtr {
   clear:both;
@@ -163,22 +174,7 @@
   font-size: 12px;
   color: rgba(0,0,0,.4);
 }
-#expSection {
-  width:100%;  
-  padding: 12px;
-}
 
-#expArticle {
-  color: white;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  float: left;
-  width: 50%;
-  padding: 12px;
-}
 
 #div1, #div2 {
   position:relative;
@@ -186,9 +182,19 @@
   width: 100%;
   background-color: aqua;
   background-image: -o-linear-gradient(45deg,#aa99cc 0%,#ffbbec 100%);
-  border-radius: 15px;
-  padding: 24px;
-  box-shadow: 0 10px 20px rgba(5, 6, 7, 0.4);
+  border-radius: 45px;
+  padding: 25px ;
+  box-shadow: 0 10px 10px rgba(5, 6, 7, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+button {
+  background-color: aqua;
+  background-image: -o-linear-gradient(45deg,#aa99cc 0%,#ffbbec 100%);
+  box-shadow: 0 9px rgba(5, 6, 7, 0.4);
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
   transition: 0.3s ease-in-out;
 }
 
@@ -198,7 +204,7 @@
   font-size: 14px;
   font-weight: 200;
   color: #000000;
-  padding-left: .5rem;
+  padding-left: .20rem;
 }
 
 #div1:hover {
@@ -216,22 +222,180 @@
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 960px) {
-  #expArticle{
-    width: 50%;
-  }
-}
 
-@media only screen and (max-width: 680px) {
-  #expArticle{
-    width: 100%;
-    padding: 8px;
+@media only screen and (max-width: 750px) {
+  #expHdr{
+    display: flex;
+    flex-flow: column;
+    margin-top:24px;
+    
+  }
+
+ .expArticle{
+    display: flex;
+    flex-flow: column; 
+    grid-column-gap: 1em;
   }
   #expSection{  
-    padding: 8px;
+    display: flex;
+    flex-flow: column;
+    width:100%;  
+    padding: 12px;
     }
     #div1,#div2:hover{
     transform: scale(1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.904);
     }
+
+    .image-carousel img {
+      width: auto;
+      max-width: 90%;
+      position: relative;
+    }
+}
+
+@media screen and (max-width: 40em){
+  #projects {
+    grid-template-columns: 1fr;
+    grid-column-gap: 1em;
+    width: 60vw;
+    margin: 1em auto;
+    max-width: 90%;
+    position: relative;
+}
+
+  #projects button {
+    display: inline-block;
+  }
+
+  #projects article p {
+    display: none;
+  }
+
+  #projects article.expanded p {
+    display: block;
+  }
+
+  .image-carousel img {
+    width: auto;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 25em){
+  #projects {
+    width: auto;
+    min-width: unset;
+    max-width: 90%;
+    position: relative;
+  }
+
+  .image-carousel img {
+    width: auto;
+    position: relative;
+  }
+}
+
+.image-carousel img {
+  width : 600px;
+  height: 400px;
+  border-style:solid;
+  border-width:1px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  text-align:center;
+  
+}
+
+.image-carousel h2 {
+  text-align: center;
+ 
+ }
+
+ .image-carousel img #slide {
+   display: block;
+   box-align: center;
+ }
+
+
+ .bioBtn {
+  background: aqua;
+  padding: .1em 2em;
+  color: black;
+  border:0;
+}
+
+.bioBtn:hover {
+   background: #333;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0,0.5);
+}
+
+.modal-content {
+  background-color: azure;
+  margin: 20% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgb(0, 0, 0,0.2),
+  0 7px 20px 0 rgb(0, 0, 0,0.17);
+  animation-name: modalopen;
+  animation-duration: 3s;
+}
+
+.modal-header h2{
+  margin: 0;
+}
+
+.modal-header{
+  background: aquamarine;
+  padding: 15px;
+  color: #000000;
+}
+
+.modal-body{
+  padding: 10px 20px;
+}
+
+.modal-footer{
+  padding: 10px;
+  text-align: center;
+  background: aquamarine;
+  text-emphasis-style: initial;
+}
+
+.closeBtn {
+  color: #333;
+  float: right;
+  font-size: 1rem;
+
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
+#previous {
+  position: relative;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
 }

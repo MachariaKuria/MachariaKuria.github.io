@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio Website</title>
@@ -27,103 +28,124 @@
                 test-driven environment. I have worked on .NET/MVC/Entity Framework and am currently expanding my
                 Java/Spring/MVC skills set. I look to standards that blend logic and development. I seek to utilize my
                 new
-                skills in a team/ development focused company as I expand and grow as a developer.</p>
+                skills in a team/ development focused company as I expand and grow as a developer.
+                <button id="modalBtn" class="bioBtn">My Bio</button>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <span class="closeBtn">&times;</span>
+                                <h2>My Biography Information</h2>
+                        </div>
+                        <div class="modal-body">
+                                <p>Full Stack Developer</p>
+                                <p>
+                                    I am a full stack software developer with concrete knowledge of object-oriented programming trained
+                                    within a
+                                    test-driven environment. I have worked on .NET/MVC/Entity Framework and am currently expanding my
+                                    Java/Spring/MVC skills set. I look to standards that blend logic and development. I seek to utilize my
+                                    new
+                                    skills in a team/ development focused company as I expand and grow as a developer.
+                                </p>
+                        </div>
+                        <div class="modal-footer">
+                                <h4>Skills: Java, Spring MVC, HTML5, JavaScript, jQuery, SQL, SSIS Packages...</h4>
+                        </div>
+                    </div>
+                </div>
+            </p>
             <br />
         </section>
-        <section class="project1">
-            <header id="projHdr">
-                <h2>Projects</h2>
-            </header>
-            <article id="proj1">
-                <h3>Project 1</h3>
-                <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
-                    Used the TDD environment, to modify a single pet and all pets behaviour under certain
-                    circumstances.The application handled adopting, admiting and changes in the behavior of pets in a Pet Shelter.</p>
-            </article>
-            <aside id="proj1Aside"><em>
-                Technologies used:
-                Loops, Branching statements, Collections, Iterables and Lists.
-            </em>
-            </aside>
-            <footer id="projFtr">
-                <a href="https://github.com/MachariaKuria/virtual-pet-shelter">Virtual Pet Shelter</a>
-            </footer>
-        </section>
-        <section class="project2">
-                <article id="proj2">
-                    <h3>Project 2</h3>
+        
+        <section id="myProjects">
+            <h2>My Projects</h2>
+            <p>
+                At We Can Code IT, i am learning the latest development platforms that companies are
+                looking. My projects listed below can attest to the intensity that emphasis are placed
+                on the use of latest Spring Framwork and TDD environment.
+            </p>
+
+            <div id="projects">
+                <article>
+                    <h3>Virtual Pet Shelter</h3>
+                   <a href="https://github.com/MachariaKuria/virtual-pet-shelter"><img src="./images/virtualPetShelter.jpg" alt=""></a> 
+                    <button>Show Project Detail</button>
                     <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
                         Used the TDD environment, to modify a single pet and all pets behaviour under certain
-                        circumstances.The application handled adopting, admiting and changes in the behavior of two types, Robotic and Organic pets.  
-                        Included in the application was APIE (Abstraction, Polymorphism,Inheritance and Encapsulation)
-                        pillars of OOP.</p>
+                        circumstances.The application handled adopting, admiting and changes in the behavior of pets in a Pet
+                        Shelter.</p>
+                        <p>Technologies used: Loops, Branching statements, Collections, Iterables and Lists.</p>
                 </article>
-                <aside id="proj2Aside"><em>
-                    Technologies used:Iterables, Collections, Interfaces, Extensions and Inheritance.
-                </em>
-                </aside>
-                <footer id="proj2Ftr">
-                    <a href="https://github.com/MachariaKuria/virtual-pets-amok">Virtual Pets Amok</a>
-                </footer>
-            </section> 
-            <section class="project3">
-                <article id="proj3">
-                    <h3>Project 3</h3>
-                    <p>Created/configured a Spring Boot/MVC application.Used accessors methods to return information about review attributes. 
-                        These allowed the Thymeleaf templates to display information about reviews templates.</p>
+                <article>
+                    <h3>Virtual Pets Amok</h3>
+                    <a href="https://github.com/MachariaKuria/virtual-pets-amok"><img src="./images/PetsAmok.jpg" alt=""></a>
+                    <button>Show Project Detail</button>
+                    <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
+                            Used the TDD environment, to modify a single pet and all (Organic and Robotic) pets behavior.
+                            Seperation of the pets was handled by the APIE (Abstraction, Polymorphism,Inheritance and Encapsulation)
+                            the 4 pillars of OOP.</p>
+                            <p>Technologies used:Iterables, Collections, Interfaces, Extensions and Inheritance.</p>
                 </article>
-                <aside id="proj3Aside"><em>
-                    Technologies used:
-                    Spring Initialz; Thymeleaf;Spring MVC Framework.
-                </em>
-                </aside>
-                <footer id="proj3Ftr">
-                    <a href="https://github.com/MachariaKuria/Reviews-site">Reviews Site</a>
-                </footer>
-            </section> 
-            <header id="expHdr">
-                <h2>Work Experience</h2>
-               <h3>United Parcel Service</h3>
-             </header>
-            <body id="expBody">
-                <section id="expSection">
-                    <article id="expArticle">
-                        <div id="div1">
-                            <h2>Sr Web Deveoper</h2>
-                            <p>
-                                <ul>
-                                    <li> Designed, developed and tested user friendly web pages per user specifications.</li>
-                                    <li>Made modifications to SQL tables using CRUD and stored procedures.
-                                    <li>Built and Implemented SSIS packages using SQL data tools for data migration.</li>
-                                    <li>Built and tested reports using the rdlc and Report viewer control.</li>
-                                </ul>
-            
-                            </p>
-                        </div>
-                    </article>
-                    <article id="expArticle">
-                        <div id="div2">
-                            <h2>Programmer</h2>
-                            <p>
-                                <ul>
-                                    <li> Run ad hoc queries to pull data from the SQL server database.</li>
-                                    <li> Developed, designed and maintained MS Access applications.</li>
-                                    <li> Maintained files, folders and subfolders managing access rights to user folders and file
-                                        maintenance.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </article>
-             </section>
-            </body>
-             <footer id="expFtr">
-               <h4>Skills: Java, Spring MVC, HTML5, JavaScript, jQuery, SQL, SSIS Packages...</h4>
-             </footer>
+                <article>
+                    <h3>Review Full Stack Website</h3>
+                  <a href="https://github.com/MachariaKuria/Reviews-site"><img src="./images/JPA.jpg" alt=""></a>
+                    <button>Show Project Detail</button>
+                    <p>Created a Console Application to control behavior of pets in a shetler based on user prompts.
+                        Used the TDD environment, to modify a single pet and all pets behaviour under certain
+                        circumstances.The application handled adopting, admiting and changes in the behavior of pets in a Pet
+                        Shelter.</p>
+                        <p>Technologies used: Spring Initialz; Thymeleaf;Spring MVC Framework.</p>
+                </article>
+            </div>
+        </section>
+        <header id="expHdr">
+            <h2>Work Experience</h2>
+            <h3>United Parcel Service</h3>
+        </header>
+
+        <section id="expBody">
+            <section id="expSection">
+                <article class="expArticle">
+                    <div id="div1">
+                        <h2>Sr Web Deveoper</h2>
+                        <p>
+                            <ul>
+                                <li> Designed, developed and tested user friendly web pages per user specifications.</li>
+                                <li>Made modifications to SQL tables using CRUD and stored procedures.
+                                <li>Built and Implemented SSIS packages using SQL data tools for data migration.</li>
+                                <li>Built and tested reports using the rdlc and Report viewer control.</li>
+                            </ul>
+
+                        </p>
+                    </div>
+                </article>
+                <article class="expArticle">
+                    <div id="div2">
+                        <h2>Programmer</h2>
+                        <p>
+                            <ul>
+                                <li> Run ad hoc queries to pull data from the SQL server database.</li>
+                                <li> Developed, designed and maintained MS Access applications.</li>
+                                <li> Maintained files, folders and subfolders managing access rights to user folders
+                                    and file
+                                    maintenance.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section class="image-carousel">
+            <h2>My Projects at a Glance </h2>
+            <img id="slide">
+        </section>
+        <footer id="expFtr">
+            <h4>Skills: Java, Spring MVC, HTML5, JavaScript, jQuery, SQL, SSIS Packages...</h4>
+        </footer>
 
     </main>
     <nav>
         <a href="#aboutMe">About Me</a>
-        <a href="#projHdr">My Projects</a>
+        <a href="#projects">My Projects</a>
         <a href="#expHdr">Experience</a>
         <a href="#socio">Contact</a>
     </nav>
@@ -132,6 +154,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="./script.js"></script>
 </body>
 <footer>
     <div id="socio">
